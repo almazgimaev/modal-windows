@@ -17,7 +17,7 @@ const newer = require("gulp-newer");
 // }
 
 function css() {
-  return src('app/src/sass/**/*.sass')
+  return src('app/src/sass/style.sass')
   .pipe(sass())
   .pipe(autoprefixer({
     cascade: 'true'
@@ -29,7 +29,11 @@ function css() {
 }
 
 function js() {
-  return src('app/src/scripts/**/*.js')
+  return src([
+    'app/src/scripts/base.js',
+    'app/src/scripts/plugins/**/*.js',
+    'app/src/scripts/script.js'
+  ])
   .pipe(concat('app.js'))
   .pipe(GulpUglify())
   .pipe(dest('app/js'))
@@ -53,7 +57,7 @@ function clearApp() {
 function startWatch() {
   watch('app/index.html').on('change', browserSync.reload);
   watch('app/src/sass/**/*.sass', series(css));
-  watch('app/src/scripts/**/*.js', series(js));
+  watch('app/src/scripts/**/*.js', series(js)).on('change', browserSync.reload);
   watch('app/src/img/src', series(imgMin))
 }
 
