@@ -1,6 +1,12 @@
 let rooms = [
   {id: 1, title: 'Living-room', price: 13000, img: "../src/img/light/Living-Room.jpg"},
   {id: 2, title: 'Dinnig-room', price: 11000, img: "../src/img/light/Dinnig-Room.jpg"},
+  {id: 2, title: 'Dinnig-room', price: 11000, img: "../src/img/light/Dinnig-Room.jpg"},
+  {id: 2, title: 'Dinnig-room', price: 11000, img: "../src/img/light/Dinnig-Room.jpg"},
+  {id: 2, title: 'Dinnig-room', price: 11000, img: "../src/img/light/Dinnig-Room.jpg"},
+  {id: 2, title: 'Dinnig-room', price: 11000, img: "../src/img/light/Dinnig-Room.jpg"},
+  {id: 2, title: 'Dinnig-room', price: 11000, img: "../src/img/light/Dinnig-Room.jpg"},
+  {id: 2, title: 'Dinnig-room', price: 11000, img: "../src/img/light/Dinnig-Room.jpg"},
   {id: 3, title: 'Second-Room', price: 15000, img: "../src/img/light/Second-Room.jpeg"}
 ]
 
